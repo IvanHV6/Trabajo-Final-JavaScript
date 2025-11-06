@@ -62,7 +62,7 @@ Código
 
 ## Tecnologías utilizadas
 
-- **HTML5 semántico**  
+- **HTML5**  
 - **CSS3**  
 - **JavaScript (ES6)**  
 - **Leaflet + Leaflet Routing Machine**  
@@ -72,11 +72,13 @@ Código
 
 ##  Cómo probar el proyecto
 
-1. Clonar o descargar el repositorio.  
-2. Acceder al siguiente enlace:
-3. Abrir el proyecto con un servidor local (ej. Live Server en VS Code).  
+1. ENLACE DE ACESSO PAGINA WEB: https://ivanhv6.github.io/Trabajo-Final-JavaScript/
+2. Clonar o descargar el repositorio.  
+3. Acceder al siguiente enlace:
+4. Abrir el proyecto con un servidor local (ej. Live Server en VS Code).  
    - Esto es necesario para que funcionen la geolocalización y el `fetch` de noticias.  
-4. Navegar entre las páginas desde la barra de navegación fija.  
+5. Navegar entre las páginas desde la barra de navegación fija.  
 
 ---
+
 
