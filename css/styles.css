@@ -1,0 +1,551 @@
+/* ------------------- PALETA Y FUENTES ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --azul-oscuro: #1b2a49;
+    --azul-piscina: #3ec6e0;
+    --azul-claro: #b8c1ec;
+    --naranja: #f4a259;
+    --blanco: #fff;
+    --gris-claro: #f4f4f4;
+    --gris: #e5e5e5;
+    --fuente-titulo: 'Montserrat', Arial, sans-serif;
+    --fuente-texto: 'Roboto', 'Segoe UI', Arial, sans-serif;
+}
+
+/* ------------------- ESTILOS GENERALES ------------------- */
+body {
+    font-family: var(--fuente-texto);
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, var(--azul-claro) 0%, var(--blanco) 100%);
+    color: var(--azul-oscuro);
+    min-height: 100vh;
+}
+
+/* ------------------- HEADER ------------------- */
+header {
+    background: linear-gradient(90deg, var(--azul-piscina) 60%, var(--azul-oscuro) 100%);
+    height: 40px;
+    color: var(--blanco);
+    padding: 70px 0 50px 0;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(62,198,224,0.15);
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    font-family: var(--fuente-titulo);
+}
+
+   
+h1{
+    margin-top: 0px;
+    font-size: 40px;
+    text-align: center;
+}
+
+/* ------------------- NAVEGACIÓN ------------------- */
+nav {
+    background: rgba(27,42,73,0.98);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(62,198,224,0.10);
+    backdrop-filter: blur(2px);
+    font-family: var(--fuente-titulo);
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 18px;
+}
+nav ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.15rem;
+    padding: 14px 22px;
+    border-radius: 30px;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    letter-spacing: 1px;
+}
+nav ul li a:hover,
+nav ul li a.active {
+    background: var(--azul-piscina);
+    color: var(--azul-oscuro);
+    box-shadow: 0 2px 12px rgba(62,198,224,0.15);
+}
+
+/* ------------------- SECCIONES GENERALES ------------------- */
+section {
+    padding: 50px 24px 30px 24px;
+    margin-top: 110px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--blanco);
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(62,198,224,0.10);
+    position: relative;
+}
+section h2 {
+    color: var(--azul-piscina);
+    font-size: 2rem;
+    margin-bottom: 18px;
+    text-shadow: 0 2px 8px rgba(62,198,224,0.08);
+    font-family: var(--fuente-titulo);
+}
+
+/* ------------------- FOOTER ------------------- */
+footer {
+    background: linear-gradient(90deg, var(--azul-oscuro) 70%, var(--azul-piscina) 100%);
+    color: var(--blanco);
+    text-align: center;
+    padding: 24px 0 12px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-top: 60px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0 -2px 16px rgba(62,198,224,0.10);
+    font-family: var(--fuente-titulo);
+}
+
+/* ------------------- GALERÍA ------------------- */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+    justify-items: center;
+    align-items: start;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.galeria figure {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--gris-claro);
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(62,198,224,0.10);
+    overflow: hidden;
+}
+.galeria figcaption {
+    font-family: var(--fuente-titulo);
+    font-weight: bold;
+    font-size: 1.15rem;
+    color: var(--azul-oscuro);
+    background: var(--blanco);
+    width: 100%;
+    text-align: center;
+    padding: 12px 0 6px 0;
+    letter-spacing: 1px;
+}
+.galeria img {
+    width: 100%;
+    max-width: 340px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0 0 16px 16px;
+    box-shadow: none;
+    border: none;
+    transition: transform 0.35s, box-shadow 0.35s, border-color 0.35s;
+    background: var(--gris-claro);
+    display: block;
+    font-family: var(--fuente-texto);
+}
+.galeria img:hover {
+    transform: scale(1.07) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(244,162,89,0.18);
+    border: 4px solid var(--naranja);
+}
+
+/* ------------------- CAJA (overlay imagen ampliada) ------------------- */
+#caja {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    transition: opacity 0.3s;
+}
+#caja img {
+    width: 700px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.8);
+    background: var(--blanco);
+    padding: 8px;
+    transition: transform 0.3s;
+    display: block;
+}
+#caja img:active {
+    transform: scale(0.98);
+}
+
+/* ------------------- FORMULARIO PRESUPUESTO ------------------- */
+form {
+    background: var(--gris);
+    padding: 36px;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(62,198,224,0.10);
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: var(--fuente-texto);
+}
+form fieldset {
+    border: 2px solid var(--azul-piscina);
+    border-radius: 12px;
+    padding: 24px 18px 18px 18px;
+    margin-bottom: 22px;
+    background: var(--gris-claro);
+    box-sizing: border-box;
+}
+form legend {
+    font-family: var(--fuente-titulo);
+    color: var(--azul-oscuro);
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0 8px;
+}
+form label {
+    font-weight: 600;
+    color: var(--azul-oscuro);
+    margin-top: 12px;
+    margin-bottom: 4px;
+    display: block;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0 18px 0;
+    border: 2px solid var(--azul-piscina);
+    border-radius: 8px;
+    font-size: 1.05rem;
+    background: var(--blanco);
+    transition: border 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(62,198,224,0.06);
+    box-sizing: border-box;
+}
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form input[type="number"]:focus,
+form select:focus {
+    border: 2.5px solid var(--naranja);
+    outline: none;
+    box-shadow: 0 2px 12px rgba(244,162,89,0.10);
+}
+form input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    accent-color: var(--azul-piscina);
+}
+form .extra {
+    margin-right: 6px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+.presupuesto-final {
+    margin: 18px 0;
+    background: var(--blanco);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(62,198,224,0.06);
+}
+.condiciones {
+    margin-top: 12px;
+    margin-bottom: 8px;
+    display: block;
+}
+.botones-form {
+    margin-top: 18px;
+}
+
+/* ----------- ESTILO PARA BOTONES DEL PRESUPUESTO ----------- */
+form button,
+form input[type="submit"],
+form input[type="reset"] {
+    background: linear-gradient(90deg, var(--azul-piscina) 70%, var(--naranja) 100%);
+    color: var(--blanco);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-family: var(--fuente-titulo);
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 2px 12px rgba(62,198,224,0.10);
+    margin: 8px 8px 0 0;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+    outline: none;
+    display: inline-block;
+}
+form button:hover,
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+    background: linear-gradient(90deg, var(--naranja) 60%, var(--azul-piscina) 100%);
+    color: var(--azul-oscuro);
+    box-shadow: 0 4px 24px rgba(244,162,89,0.18);
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* Botón reset*/
+.reset-boton {
+    background: var(--gris);
+    color: var(--azul-oscuro);
+    margin-left: 10px;
+}
+
+/* ------------------- TAMAÑOS DE PISCINAS ------------------- */
+.piscinas-tamanos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin: 40px 0;
+}
+.piscina-tamano {
+    background: linear-gradient(135deg, var(--azul-piscina) 60%, var(--azul-claro) 100%);
+    color: var(--azul-oscuro);
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(62,198,224,0.13);
+    padding: 32px 28px 24px 28px;
+    min-width: 220px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 3px solid var(--blanco);
+    position: relative;
+    overflow: hidden;
+    font-family: var(--fuente-titulo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.piscina-tamano:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 8px 32px rgba(244,162,89,0.18);
+    border-color: var(--naranja);
+}
+.piscina-tamano .icono-agua {
+    font-size: 3.2rem;
+    margin-bottom: 12px;
+    color: var(--azul-oscuro);
+}
+.piscina-tamano h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.5rem;
+    color: var(--azul-oscuro);
+    font-family: var(--fuente-titulo);
+}
+.piscina-tamano .medidas {
+    font-size: 1.1rem;
+    color: var(--azul-oscuro);
+    background: var(--blanco);
+    border-radius: 8px;
+    padding: 4px 12px;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.piscina-tamano p {
+    font-size: 1.05rem;
+    margin-bottom: 0;
+    font-family: var(--fuente-texto);
+}
+
+/* ------------------- NOTICIAS ------------------- */
+.noticias-listado {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+    margin: 32px 0 0 0;
+}
+.noticias {
+    background: linear-gradient(120deg, var(--blanco) 80%, var(--azul-claro) 100%);
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(62,198,224,0.10);
+    padding: 24px 22px 18px 22px;
+    max-width: 340px;
+    min-width: 220px;
+    flex: 1 1 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-left: 6px solid var(--azul-piscina);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.noticias:hover {
+    box-shadow: 0 8px 32px rgba(244,162,89,0.18);
+    transform: translateY(-4px) scale(1.03);
+    border-left: 6px solid var(--naranja);
+}
+.noticias h3 {
+    color: var(--azul-piscina);
+    font-family: var(--fuente-titulo);
+    font-size: 1.18rem;
+    margin: 0 0 8px 0;
+    letter-spacing: 1px;
+}
+.noticias p {
+    color: var(--azul-oscuro);
+    font-size: 1.05rem;
+    margin: 0;
+    font-family: var(--fuente-texto);
+}
+
+/* ------------------- POR QUÉ ELEGIRNOS ------------------- */
+.porque-elegirnos {
+    text-align: center;
+}
+.porque-elegirnos ul {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+    background: var(--azul-claro);
+    border-radius: 14px;
+    padding: 24px 36px;
+    box-shadow: 0 2px 12px rgba(62,198,224,0.10);
+    border: 2px solid var(--azul-piscina);
+}
+.porque-elegirnos ul li {
+    font-size: 1.15rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 14px;
+    font-weight: 500;
+    position: relative;
+    padding-left: 32px;
+    line-height: 1.6;
+}
+.porque-elegirnos ul li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.1em;
+    color: var(--naranja);
+}
+
+/* ------------------- OPINIONES ------------------- */
+.opiniones {
+    text-align: center;
+}
+.opiniones article {
+    background: var(--gris-claro);
+    padding: 16px;
+    margin: 12px auto;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 2px 8px rgba(62,198,224,0.10);
+}
+.opiniones article p {
+    font-size: 1.1rem;
+    color: var(--azul-oscuro);
+    font-style: italic;
+    margin: 0;
+}
+
+/* ------------------- MEDIAQUERYS ------------------- */
+@media (max-width: 900px) {
+    section {
+        padding: 18px 2vw;
+    }
+    .galeria {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    .galeria img {
+        max-width: 98vw;
+        height: 140px;
+    }
+    #caja img {
+        width: 95vw;
+        height: 50vw;
+        max-width: 95vw;
+        max-height: 60vh;
+    }
+    nav ul li {
+        margin: 0 6px;
+    }
+    form {
+        padding: 12px;
+    }
+    header {
+        font-size: 1.5rem;
+        padding: 30px 0 20px 0;
+    }
+    .piscinas-tamanos {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    .piscina-tamano {
+        min-width: 180px;
+        max-width: 98vw;
+        padding: 20px 10px 16px 10px;
+    }
+    .noticias-listado {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    .noticias {
+        max-width: 98vw;
+        min-width: 0;
+    }
+    .porque-elegirnos ul {
+        padding: 16px 8vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+    .galeria img {
+        height: 120px;
+    }
+    #caja img {
+        width: 98vw;
+        height: 40vw;
+        max-width: 98vw;
+        max-height: 40vh;
+    }
+    form {
+        padding: 12px;
+    }
+    form fieldset {
+        padding: 12px 4vw;
+    }
+    .porque-elegirnos ul {
+        padding: 12px 2vw;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto | Piscinas AquaPlus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilos.css">
+    
+    <!-- IMPORTANTE para que el mapa se vea -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+    <!-- Para las rutas -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Contacto y ubicación</h1>
+    </header>
+
+    <section aria-labelledby="donde-estamos">
+        <h2 id="donde-estamos">¿Dónde estamos?</h2>
+        
+        <!-- Contenedor del mapa - IMPORTANTE: debe tener altura definida -->
+        <div id="map" style="width:100%; max-width:800px; height:450px; margin:0 auto; border-radius:10px;"></div>
+
+        <address style="margin-top:16px;">
+            <p><strong>Dirección:</strong> C/ Agua Clara, 123, Ciudad Piscina</p>
+            <p><strong>Teléfono:</strong> <a href="tel:+34912345678">912 345 678</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@aquaplus.com">info@aquaplus.com</a></p>
+        </address>
+    </section>
+
+    <footer>
+        <div class="redessociales">
+            <a href="#" aria-label="Síguenos en X">
+                <img src="../assets/Logos-redesSociales/logox.png" alt="Cuenta X" class="redsocial" height="75" width="75">
+            </a>
+            <a href="#" aria-label="Síguenos en Facebook">
+                <img src="../assets/Logos-redesSociales/logo_facebook.png" alt="Cuenta Facebook" class="redsocial" height="75" width="75">
+            </a>
+            <a href="#" aria-label="Síguenos en Instagram">
+                <img src="../assets/Logos-redesSociales/logo_instagram.png" alt="Cuenta Instagram" class="redsocial" height="75" width="75">
+            </a>
+        </div>
+        <address>
+            <p>C/ Agua Clara, 123, Ciudad Piscina</p>
+        </address>
+        <p>© 2025 Piscinas AquaPlus | <a href="#" style="color:#fff;text-decoration:underline;">Aviso legal</a></p>
+    </footer>
+
+    <!-- Leaflet JS - Librería principal de mapas -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+    <!-- Para calcular rutas -->
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+    <!--Ruta JavaScript-->
+    <script src="../js/contacto.js"></script>
+</body>
+</html>

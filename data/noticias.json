@@ -1,0 +1,24 @@
+{
+  "noticias": [
+    {
+      "titulo": "Lanzamiento de Nuevo Producto",
+      "fecha": "2023-10-01",
+      "contenido": "Estamos emocionados de anunciar el lanzamiento de nuestro nuevo producto, que promete revolucionar la industria."
+    },
+    {
+      "titulo": "Evento Anual de la Empresa",
+      "fecha": "2023-09-15",
+      "contenido": "Únete a nosotros en nuestro evento anual donde compartiremos las últimas innovaciones y logros de la empresa."
+    },
+    {
+      "titulo": "Colaboración con Nuevos Socios",
+      "fecha": "2023-08-20",
+      "contenido": "Hemos establecido nuevas colaboraciones estratégicas que fortalecerán nuestra posición en el mercado."
+    },
+    {
+      "titulo": "Premios y Reconocimientos",
+      "fecha": "2023-07-30",
+      "contenido": "Nuestra empresa ha sido reconocida con varios premios por su excelencia en el servicio al cliente."
+    }
+  ]
+}

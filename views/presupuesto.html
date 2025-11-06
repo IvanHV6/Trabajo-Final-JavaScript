@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Presupuesto | Piscinas AquaPlus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="presupuesto.html" class="active">Presupuesto</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Calcula tu Presupuesto</h1>
+    </header>
+    <section>
+        <h2>Solicita tu presupuesto personalizado</h2>
+        
+        <!-- Contenedor para mensajes de confirmación/error -->
+        <div id="mensaje-formulario" style="display:none; padding:20px; margin-bottom:25px; border-radius:10px; text-align:center; font-weight:bold; font-size:1.1rem;"></div>
+        
+        <form id="contacto-form" autocomplete="off">
+            <fieldset>
+                <legend>Datos de contacto</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" maxlength="15" required>
+                <span id="error-nombre" class="error-message"></span>
+                
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" maxlength="40" required>
+                <span id="error-apellidos" class="error-message"></span>
+                
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" maxlength="9" required>
+                <span id="error-telefono" class="error-message"></span>
+                
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" required>
+                <span id="error-email" class="error-message"></span>
+            </fieldset>
+            <fieldset>
+                <legend>Presupuesto</legend>
+                <label for="producto">Tipo de piscina:</label>
+                <select id="producto" name="producto" required>
+                    <option value="">Seleccione un tamaño</option>
+                    <option value="10000">Pequeña (3x2m)</option>
+                    <option value="15000">Mediana (6x3m)</option>
+                    <option value="20000">Grande (10x5m)</option>
+                </select>
+                <label for="plazo">Plazo de entrega (meses):</label>
+                <input type="number" id="plazo" min="1" max="12" value="3" required>
+                <label>Extras:</label>
+                <label><input type="checkbox" name="extras" class="extra" value="500"> Cascada (+500€)</label>
+                <label><input type="checkbox" name="extras" class="extra" value="300"> Iluminación LED (+300€)</label>
+                <label><input type="checkbox" name="extras" class="extra" value="800"> Climatizador (+800€)</label>
+                <div class="presupuesto-final">
+                    <strong>Presupuesto estimado: <span id="presupuesto-final">0</span> €</strong>
+                </div>
+                <label class="condiciones">
+                    <input type="checkbox" id="condiciones" required> Acepto las condiciones de privacidad
+                </label>
+                <div class="botones-form">
+                    <button type="submit">Enviar</button>
+                    <button type="reset" class="reset-boton">Resetear</button>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        <div class="redessociales">
+            <a href="#" aria-label="Síguenos en X">
+                <img src="../assets/Logos-redesSociales/logox.png" alt="Cuenta X" class="redsocial" height="75" width="75">
+            </a>
+            <a href="#" aria-label="Síguenos en Facebook">
+                <img src="../assets/Logos-redesSociales/logo_facebook.png" alt="Cuenta Facebook" class="redsocial" height="75" width="75">
+            </a>
+            <a href="#" aria-label="Síguenos en Instagram">
+                <img src="../assets/Logos-redesSociales/logo_instagram.png" alt="Cuenta Instagram" class="redsocial" height="75" width="75">
+            </a>
+        </div>
+        <address>
+            <p>C/ Agua Clara, 123, Ciudad Piscina</p>
+        </address>
+        <p>© 2025 Piscinas AquaPlus | <a href="#" style="color:#fff;text-decoration:underline;">Aviso legal</a></p>
+    </footer>
+    <script src="../js/presupuesto.js"></script>
+</body>
+</html>
