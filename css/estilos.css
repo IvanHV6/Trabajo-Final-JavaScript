@@ -105,6 +105,8 @@ section h2 {
     font-family: var(--fuente-titulo);
 }
 
+
+
 /* ------------------- FOOTER ------------------- */
 footer {
     background: linear-gradient(90deg, var(--azul-oscuro) 70%, var(--azul-piscina) 100%);
@@ -549,3 +551,166 @@ form input[type="reset"]:hover {
         padding: 12px 2vw;
     }
 }
+
+/* ============================================================
+   📱 RESPONSIVE PROFESIONAL PARA MÓVILES (max-width: 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+
+    /* ---------------- NAV MÓVIL ---------------- */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 0;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 90%;
+        text-align: center;
+        padding: 12px 0;
+        font-size: 1.1rem;
+    }
+
+    .active{
+
+        padding: 10px 10px 10px 10px;
+    }
+
+    /*-------------------- PORQUE ELEGIRNOS ---------------------*/
+
+    .porque-elegirnos ul{
+
+        padding: 10px 30px 10px 30px;
+
+        
+    }
+
+    /* ---------------- HEADER ---------------- */
+    header {
+        padding: 40px 0 30px 0;
+        font-size: 1.8rem;
+    }
+
+    /* ---------------- SECCIONES ---------------- */
+    section {
+        padding: 24px 16px;
+        margin-top: 90px;
+    }
+
+    /* ---------------- PISCINAS ---------------- */
+    .piscinas-tamanos {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+   
+
+    .piscina-tamano {
+        width: 90%;
+        max-width: none;
+        min-width: 0;
+        padding: 20px 14px;
+    }
+
+    /* ---------------- GALERÍA ---------------- */
+     .galeria {
+        grid-template-columns: 1fr;   
+        justify-items: stretch;       
+    }
+
+    .galeria figure {
+        width: 100%;
+        align-items: stretch;         
+    }
+
+    .galeria img {
+        max-width: 100%;              
+        width: 100%;
+        height: auto;                 
+    }
+}
+
+    /* ---------------- OVERLAY IMAGEN ---------------- */
+    #caja img {
+        width: 90vw;
+        height: auto;
+        max-height: 80vh;
+        border-radius: 10px;
+    }
+
+    /* ---------------- NOTICIAS ---------------- */
+    .noticias-listado {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .noticias {
+        width: 90%;
+        max-width: none;
+        min-width: 0;
+    }
+
+    .noticias h3 {
+        font-size: 1.1rem;
+    }
+
+    .noticias p {
+        font-size: 0.95rem;
+    }
+
+    /* ---------------- FORMULARIO ---------------- */
+    form {
+        width: 95%;
+        padding: 16px;
+    }
+
+    form fieldset {
+        padding: 16px 12px;
+    }
+
+    form input,
+    form select {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .botones-form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    form button,
+    form input[type="reset"] {
+        width: 100%;
+        margin: 0;
+    }
+
+    #mensaje-formulario {
+        font-size: 1rem;
+        padding: 14px;
+    }
+
+    /* ---------------- MAPA CONTACTO ---------------- */
+    #map {
+        height: 300px !important;
+        margin-bottom: 20px;
+    }
+
+    .leaflet-routing-container {
+        display: none !important;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+    footer {
+        padding: 20px 0;
+        font-size: 1rem;
+    }
+
